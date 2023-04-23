@@ -1,0 +1,17 @@
+{
+  "name": "belajar-cypress",
+  "version": "1.0.0",
+  "description": "Belajar menggunakan Cypress untuk testing E2E",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cypress open"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "alifma",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.10.0"
+  }
+}
