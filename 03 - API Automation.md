@@ -31,7 +31,7 @@
     - 302 (Temporary Redirect)
     - 304 (Not Modified)
   - 4xx (Client Error)
-    - 400 (Bad Request)
+    - 400 (Bad Request)``
     - 401 (Unauthorized)
     - 403 (Forbidden)
     - 404 (Not Found)
@@ -56,3 +56,43 @@
   - StatusCode: HTTP Response code
   - ResponseBody: Keseluruhan balikan
   - Message: Informasi tambahan (optional)
+
+
+
+# How To Test API
+## Case Study Create API Test Case & Execution
+- [Sample APIMatic](https://www.apimatic.io/apidocs/petstoresampleapi/v/1_0_5#/http/how-to-get-started), API Matic ini isinya dokumentasi dari endpoint sample yang sudah ada, bisa sebagai patokan dokumentasik, tapi di bagiani inituh belum terlihat, jadi gak bisa langsung diexec, kalau mau langsung diexec bisa pakai posstman
+
+- [Petstore Swagger](https://petstore.swagger.io/
+
+# Postman API
+
+## Postman Introduction
+- Postman, REST Client untuk ujicoba API
+
+## Why Postman?
+- Usernya banyak
+- Uinya simple
+- Bisa automation
+
+## Postman Installation
+### Set variables on Postman response
+```js
+  var jsonData = pm.response.json();
+  pm.environment.set('TOKEN', jsonData.token)
+```
+### Get variables
+```js
+  var token = pm.environment.get('TOKEN);
+```
+### Postman Testing
+```js
+  pm.text('Test Response 200', function() {
+    pm.response.to.have.status(200);
+  } )
+
+
+  pm.text('Test Balikan Ada Message', function() {
+    pm.expect(pm.response.text()).to.include("message") 
+  } )
+```
