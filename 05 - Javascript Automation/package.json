@@ -1,0 +1,23 @@
+{
+  "name": "learn-mocha-chai",
+  "version": "1.0.0",
+  "description": "Belajar membuat testing automation pada JS dengan Mocha Chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/api/*   --reporter mochawesome",
+    "test-report": "mocha test/api/*",
+    "test-get": "mocha test/api/getExample.js",
+    "test-post": "mocha test/api/postExample.js"
+  },
+  "author": "alifma",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "mochawesome": "^7.1.3"
+  }
+}
